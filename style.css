@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+  scroll-behavior: smooth;
+    overflow: hidden;
+    background: linear-gradient(10deg, rgb(255, 0, 242), rgb(0, 224, 240),rgb(245, 245, 245));
+}
+
+.gallery_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 28% auto;
+}
+
+
+.gallery{
+    width: 900px;
+
+    display: flex;
+
+    overflow-x: scroll;
+    box-shadow: 0px 0px 20px rgb(136, 62, 151);
+}
+
+.gallery::-webkit-scrollbar{
+   display: none;
+    
+}
+
+
+.horizontal{
+    width: 100%;
+    overflow-x:scroll ;
+    background-image: url(images/emty.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+
+.gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#left , #right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin: 30px;
+  cursor: pointer;
+}
+
+
+#left:hover{
+    color: rgb(247, 132, 0);
+}
+#right:hover{
+    color: rgb(248, 248, 248);
+}
+
+.gallery div img:hover{
+    
+    filter: grayscale(0);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
